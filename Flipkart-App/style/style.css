@@ -1,0 +1,35 @@
+
+*,html,body,div{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: black;
+    color: white; */
+    font-family: sans-serif;
+}
+#navbar{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    /* margin-bottom: 2rem; */
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+ul{
+   list-style: none;
+   display: flex;
+}
+li{
+  
+   margin-right: 1rem;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+color: red;
+}

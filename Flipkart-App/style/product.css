@@ -1,0 +1,31 @@
+
+#products_div{
+
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    padding: 2rem;
+    text-align: center;
+
+}
+
+#products_div>div{
+    margin: 1rem;
+    border: 1px solid black;
+
+}
+img{
+    height: 250px;
+    width: 100%;
+}
+button{
+    padding: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+/* #products_div>div:nth-child(){
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
+} */
