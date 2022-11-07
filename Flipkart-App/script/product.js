@@ -11,6 +11,20 @@ const target = document.getElementById("navbar")
 
 target.innerHTML=navbar()
 
+const renderLoadingIndicator = ()=>{
+
+    const cont = document.getElementById("loading_div");
+
+    const  h2 = document.createElement("h2");
+    h2.innerText="Loading....";
+
+    h2.style.textAlign="center";
+    h2.style.marginTop="2rem";
+
+    cont.append(h2);
+}
+renderLoadingIndicator();
+
 
 
 const handelAddtoCartClick =(el)=>{
@@ -97,11 +111,26 @@ const getData= async ()=>{
         const data = await res.json();
 
         console.log(data);
+
+        const cont=document.getElementById("loading_div");
+        cont.innerHTML=null;
         append(data);
 
     }
     catch(err){
         console.log(err);
+
+        const cont=document.getElementById("loading_div");
+        cont.innerHTML=null;
+
+        const  h2 = document.createElement("h2");
+        h2.innerText="404";
+    
+        h2.style.textAlign="center";
+        h2.style.marginTop="2rem";
+    
+        cont.append(h2);
+        
     }
 }
 
