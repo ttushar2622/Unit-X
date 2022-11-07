@@ -57,9 +57,3 @@ button{
     margin-left: 0.5rem;
 }
 
-#cartProducts_div>div:nth-child(3){
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-
-}

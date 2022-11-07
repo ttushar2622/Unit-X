@@ -33,6 +33,7 @@ const handelAddtoCartClick =(el)=>{
     cartArr.push(el);
 
     localStorage.setItem("cart",JSON.stringify(cartArr));
+    target.innerHTML=navbar()
     alert("Item Added to Cart");
 
 

@@ -19,8 +19,10 @@ const handleRemove= (el)=>{
     })
 
     localStorage.setItem("cart",JSON.stringify(cartArr));
+
     append(cartArr);
     handlePriceCalculation();
+    target.innerHTML=navbar()
 }
 
 const handlePriceCalculation = ()=>{
@@ -37,6 +39,7 @@ const handlePriceCalculation = ()=>{
     const span = document.getElementById("totalPrice_span");
 
     span.innerText=sum;
+    localStorage.setItem("totalPrice",JSON.stringify(sum));
 
 }
  
