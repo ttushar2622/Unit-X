@@ -103,12 +103,14 @@ const append =(data)=>{
 
 
 
+ let data;
+
 const getData= async ()=>{
 
     try{
         const res = await fetch(`https://fakestoreapi.com/products`);
 
-        const data = await res.json();
+         data = await res.json();
 
         console.log(data);
 
@@ -135,3 +137,26 @@ const getData= async ()=>{
 }
 
 getData();
+
+document.querySelector("#pricesort").addEventListener("change",handlesort);
+function handlesort(){
+    let selecting = document.querySelector("#pricesort").value;
+    if(selecting==""){
+      append(data);
+    }
+    else{
+      if(selecting == "High-to-low"){
+      data.sort(function (a,b){
+         return b.price-a.price;
+      });
+      append(data);
+    }
+
+    if(selecting ==  "Low-to-high"){
+      data.sort(function (a,b){
+        return a.price-b.price;
+      });
+      append(data);
+    }
+  }
+}

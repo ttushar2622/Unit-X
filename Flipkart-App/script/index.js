@@ -6,13 +6,13 @@ const target = document.getElementById("navbar")
 
 target.innerHTML=navbar()
 
-async function search(){
+// async function search(){
 
-    let query=document.getElementById("query").value;
+//     let query=document.getElementById("query").value;
 
-    let res = await  fetch(`https://fakestoreapi.com/products`)
+//     let res = await  fetch(`https://fakestoreapi.com/products`)
 
-    let data = await res.json();
-    console.log(data)
-}
-search()
+//     let data = await res.json();
+//     console.log(data)
+// }
+// search()
