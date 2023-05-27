@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="a1" href="index.html">Home page</a>
+      <a href="doctor.html">Doctor’s Dashboard</a>
+      <a href="book.html">Book Appointments</a>
+    </nav>
+
+    <div id="one"></div>
+  </body>
+</html>
+<script>
+  const BASEURL = "https://iris-spurious-snickerdoodle.glitch.me";
+  const one = document.getElementById("one");
+  const getData = async () => {
+    let res = await axios.get(`${BASEURL}/appointments`);
+    res = res.data;
+    one.innerHTML = `
+  ${res
+    .map(
+      ({
+        id,
+        name,
+        specialization,
+        experience,
+        location,
+        date,
+        slots,
+        fee,
+      }) => {
+        return ` 
+          <div style="border: 1px solid black; padding: 10px; margin: 10px;
+          display: inline-block;
+           margin: 10px;
+            width: 300px;
+          ">
+          <img src="data:image/jpeg;base64,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" alt="random image"
+           style="width: 250px; height: 250px; margin: 10px;"
+          />
+            <h3>${name}</h3>
+            <p> specialization ${specialization}</p>
+            <p> experience ${experience}</p>
+            <p> location ${location}</p>
+            <p> date ${date}</p>
+            <p> slots ${slots}</p>
+            <p> fee ${fee}</p>
+            <button 
+            class=appointment
+            style="background-color: blue; color: white; padding: 10px; border-radius: 5px; text-align: center; width: 100%px; border: none; cursor: pointer;"
+            data-id=${id}>Book Now</button>
+          </div>
+       `;
+      }
+    )
+    .join(" ")}
+  `;
+  };
+  getData();
+  one.onclick = async (e) => {
+    const id = e.target.dataset.id;
+    if (e.target.classList.contains("appointment")) {
+      let res = await axios.get(`${BASEURL}/appointments/${id}`);
+      let prevslot = res.data.slots;
+      if (prevslot == 0) {
+        alert("No slots available");
+        return;
+      }
+      res = await axios.patch(`${BASEURL}/appointments/${id}`, {
+        slots: prevslot - 1,
+      });
+      if (res.status == 200) {
+        getData();
+      }
+    }
+  };
+</script>

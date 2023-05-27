@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  margin-top: 1rem;
+}
+.nav > a {
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+.nav > a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+.user {
+  width: 50%;
+  margin: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin-top: 6rem;
+  padding: 2rem;
+  background-color: gray;
+}
+
+.forms {
+  width: 50%;
+  margin: auto;
+}
+.login {
+  margin: auto;
+  border: none;
+  padding: 1rem;
+  font-size: x-large;
+  margin-left: 2rem;
+  margin-right: 6rem;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.register {
+  margin: auto;
+  border: none;
+  padding: 1rem;
+  font-size: x-large;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.Input {
+  margin-top: 3rem;
+}
+.Input > input {
+  font-size: xx-large;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.Input > button {
+  width: 117%;
+  font-size: xx-large;
+  color: blue;
+  padding: 0.5rem;
+}
+
+.doctor {
+  width: 60%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+   
+}
+
+.doctor > input {
+  font-size: xx-large;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+.doctor > button {
+  width: 96%;
+  font-size: xx-large;
+  color: blue;
+  padding: 0.5rem;
+}
+
+.doctor > h1 {
+  text-align: center;
+  font-size: xx-large;
+  margin-bottom: 1rem;
+  color: orange;
+}
+
+.one button {
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+
+  cursor: pointer;
+}
+

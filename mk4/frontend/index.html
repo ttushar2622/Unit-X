@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./stylee/index.css">
+</head>
+<body>
+    <div id="maindiv">
+        <button id="logintoggle">Login</button>
+        <button id="registertoggle">Register</button>
+
+        <form action="" id="login">
+            <input type="text" placeholder="email" id="userlogin" required>
+            <br>
+            <input type="password" placeholder="password" id="lpassword" required>
+            <br>
+            <input type="submit" value="Login"/>
+        </form>
+
+        <form action="" id="register">
+            <input type="text" placeholder="Username" id="username" required>
+            <br>
+            <input type="text" placeholder="Email" id="email" required>
+            <br>
+            <input type="password" placeholder="Password" id="pass" required>
+            <br>
+            <span style="margin-left: 38px;font-size: 20px;color: white;" >Doctor </span>
+            <input type="checkbox"   id="doc" >
+       
+            <br>
+            <input type="submit" value="Register"/>
+      
+        </form>
+        <p id="finalAns"></p>
+    </div>
+</body>
+</html>
+<script src="./script/index.js"></script>

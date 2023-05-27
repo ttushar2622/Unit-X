@@ -1,0 +1,56 @@
+#maindiv{
+    width: 30%;
+    margin: auto ;
+    margin-top: 10%;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    background-color: #454545;
+    /* padding: 40px; */
+}
+
+ button{
+    width: 49%;
+    font-size: 20px;
+    border-radius: 20px 20px 0 0;
+    background-color: #454545;
+    color: white;
+    padding: 20px 10px;
+ }
+#login{
+    display: block;
+    
+}
+#login input{
+    width: 70%;
+}
+#register{
+    display: none;
+   
+}
+
+#register input{
+    width: 70%;
+    padding: 20px;
+    margin: 13px;
+}
+#login input{
+    width: 70%;
+    padding: 20px;
+    margin: 13px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    background-color: #19A7CE;
+    color: white;
+}
+
+#logintoggle{
+    
+    color: black;
+    background-color: white;
+  }
+
+  p{
+    color:red
+  }
