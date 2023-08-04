@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container h1{
+    font-size:xx-large;
+    color: chocolate;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+}
+button {
+    padding: 10px 20px;
+    background-color: #4995e6;
+    color: #f1ecec;
+    border: none;
+    cursor: pointer;
+}
+#pictureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+.picture-card {
+    border-radius: 5px;
+    overflow: hidden;
+}
+.picture-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.picture-info {
+    padding: 5px;
+}
+@media (max-width: 600px) {
+    #pictureGrid {
+        grid-template-columns: 1fr;
+    }
+}
