@@ -5,6 +5,7 @@ const App = () => {
   const [totalPages, setTotalPages] = useState(0);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [search,setSearch]=useState('');
 
   useEffect(() => {
     setLoading(true)
@@ -27,6 +28,8 @@ const App = () => {
      }
   }
 
+  const searchedChar=char.filter(el=>el.name.toLowerCase().includes(search.toLocaleLowerCase()));
+
   // console.log(char)
   // console.log(totalPages);
   return (
@@ -34,9 +37,15 @@ const App = () => {
       <button disabled={page===1} onClick={()=>handlePage(page - 1)}>Prev</button>
       <span>{page}</span>
       <button disabled={page===totalPages} onClick={()=>handlePage(page + 1)}>Next</button>
+      <input
+      type="text"
+      placeholder="Search characters by name"
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+    />
       {loading ? (<h1>Loading...</h1>) : 
        (
-        char.map((el) => (
+        searchedChar.map((el) => (
           <div key={el.id}>
             <li>{el.name}</li>
             <img src={el.image} alt={el.name} />
