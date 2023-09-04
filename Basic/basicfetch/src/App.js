@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ProductList from './components/ProductList';
 
 const App = () => {
   const [char, setChar] = useState([]);
@@ -52,6 +53,7 @@ const App = () => {
           </div>
         ))
       )}
+      {<ProductList/>}
     </div>
   );
 }
