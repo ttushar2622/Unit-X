@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ProductList from './components/ProductList';
+import LoginForm from './components/LoginForm';
 
 const App = () => {
   const [char, setChar] = useState([]);
@@ -54,6 +55,7 @@ const App = () => {
         ))
       )}
       {<ProductList/>}
+      {<LoginForm/>}
     </div>
   );
 }
