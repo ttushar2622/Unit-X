@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="menu-button" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i> 
+            </div>
+            <div>
+              
+            </div>
+            <div class="navbar-items">
+                <p>Home</p>
+                <p>Order Food</p>
+                <p>Resraurant</p>
+                <p>Testimonials</p>
+                <p>Contact  Us</p>
+            </div>
+            <div class="navbar-icons">
+                <i class="fa fa-phone"></i>
+                <i class="fa fa-shopping-cart"></i>
+            </div>
+        </div>
+        <div class="mobile-dropdown" id="mobileDropdown">
+            <div class="close-button" onclick="toggleMenu()">&times;</div>
+            <p>Home</p>
+            <p>Order Food</p>
+            <p>Restaurant</p>
+            <p>Testimonials</p>
+            <p>Contact Us</p>
+        </div>
+    </header>
+    <div class="image-container">
+        <img src="./images/HTML-CSS/img1.jpg" alt="Description of the image">
+        <div class="overlay">
+           <div>
+            <h1>LOREM IPSEM</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae assumenda, non a, neque voluptatibus vero voluptate sit, labore nisi quis velit. Similique ad at deserunt, molestias mollitia reprehenderit voluptatum id!</p>
+           </div>
+        </div>
+        <div class="colorscheme">
+           
+        </div>
+    </div>
+    <div class="container">
+       <h1>Order Now</h1>
+       <div class="card-container">
+        <div class="cards">
+            <img src="./images/HTML-CSS/img4.jpg" alt="cardimg1"/>
+            <h1 style="text-align: center;">BURGER</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="cards">
+            <img src="./images/HTML-CSS/img2.jpg" alt="cardimg2"/>
+            <h1 style="text-align: center;">PIZZA</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+        <div class="cards">
+            <img src="./images/HTML-CSS/img3.jpg" alt="cardimg3"/>
+            <h1 style="text-align: center;">PASTA</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+       </div>
+       <div class="btn">
+        <button>Order</button>
+       </div>
+    </div>
+</body>
+</html>
+<script>
+    function toggleMenu() {
+    const mobileDropdown = document.getElementById("mobileDropdown");
+    
+    if (mobileDropdown.style.left === "0px") {
+        mobileDropdown.style.left = "-300px"; 
+    } else {
+        mobileDropdown.style.left = "0px";
+    }
+}
+</script>
